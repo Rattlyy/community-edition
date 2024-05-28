@@ -42,9 +42,9 @@ services:
 
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.plausible.rule=Host(`test3.dokploy.com`)"
+      - "traefik.http.routers.plausible.rule=Host(`plausible.dokploy.com`)"
       - "traefik.http.routers.plausible.entrypoints=websecure"
-      - "traefik.http.routers.plausible.tls=letsencrypt"
+      - "traefik.http.routers.plausible.tls.certResolver=letsencrypt"
       - "traefik.http.services.plausible.loadbalancer.server.port=8000"
 
 volumes:
