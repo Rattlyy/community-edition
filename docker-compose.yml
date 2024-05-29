@@ -46,7 +46,6 @@ services:
       - "traefik.http.routers.plausible.entrypoints=websecure"
       - "traefik.http.routers.plausible.tls.certResolver=letsencrypt"
       - "traefik.http.services.plausible.loadbalancer.server.port=8000"
-
 volumes:
   db-data:
     driver: local
